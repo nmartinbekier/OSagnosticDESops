@@ -5,12 +5,14 @@ he first time I just downloaded the .dmg binaries for SageMath-9.4 (https://gith
 
 ## Second installation: SageMath 9.1 with conda, in its own environment
 For using conda, I initially installed Anaconda Navigator (https://docs.anaconda.com/anaconda/navigator/index.html) to be able to manage more easily different environments and conda packages. I installed it through the Graphical Installer (https://www.anaconda.com/products/individual#macos , 515MB). It was useful at first specially to explore recommended applications and IDEs (JupyterLab and Spyder specially), and to see and create different test environments. Shortly after the GUI stopped being useful, as it is very slow, and when there where problems testing packages (which was frequently), it didn't show the errors or warnings.
+
 After this, I started using directly conda from the terminal.
 
 In particular, I installed sage from the conda-forge channel, as shown in https://doc.sagemath.org/html/en/installation/conda.html , through the sequence:
 * conda config --add channels conda-forge ## Adding the channel
 * conda config --set channel_priority strict ## Changing the channel priority
 * conda create -n sage sage=9.1
+
 From what I remember, I think I had to specify python 3.7 for it to work:
 * conda create -n sage sage=9.1 python=3.7
 
@@ -22,6 +24,7 @@ To play with some IDEs, such as the latest versions of Spyder and Jupyterlab, th
 Now I use sage mainly through Jupyterlab, in the sage environment
 * conda activate sage
 * sage -n jupyterlab
+
 Although the integrated debugger and variable explorer doesn't work with the sage kernel, I find it nicer to work there than in jupyter notebooks, among others because of easier contextual documentation, short description of methods and method parameters, and for using a dark theme (so much white burns my eyes ;) .
 
 I also installed scikit-learn and other packages in this environment without problem
